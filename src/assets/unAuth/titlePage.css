@@ -1,0 +1,112 @@
+.title-page {
+  --orange: #f5a623;
+  --black: #000;
+  --white: #fff;
+
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    url('https://cdn.stocksnap.io/img-thumbs/960w/cooking-food_RRAZGYXTZI.jpg')
+    center / cover no-repeat;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.title-page__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.title-page__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.title-page__logo {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.title-page__logo span {
+  color: var(--orange);
+}
+
+.title-page__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  max-width: 720px;
+}
+
+.title-page__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(3.5rem, 12vw, 7.5rem);
+  font-weight: 700;
+  color: var(--orange);
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.title-page__subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 2.75rem;
+  line-height: 1.65;
+}
+
+.title-page__subtitle span {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.title-page__btn {
+  background: var(--orange);
+  color: var(--black);
+  border: none;
+  padding: 1rem 3.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.title-page__btn:hover {
+  background: #ffb733;
+  transform: translateY(-2px);
+}
+
+.title-page__btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .title-page__header {
+    padding: 1.25rem 1rem;
+  }
+
+  .title-page__content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .title-page__btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
