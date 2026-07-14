@@ -1,24 +1,16 @@
 import './mainPage.css'
 
-const RECIPES = [
-  { category: 'Italian', name: 'Creamy Pasta Carbonara', detail: '25 min' },
-  { category: 'Asian', name: 'Thai Green Curry', detail: '30 min' },
-  { category: 'Dessert', name: 'Classic Tiramisu', detail: '45 min' },
-]
-
 function MainPage() {
   return (
     <div className="main-page">
       <header className="main-header">
         <div className="main-header__inner">
           <a href="#home" className="main-header__logo">
-            Cook<span>Booky</span>
+            Cook<span>Cat</span>
           </a>
           <nav className="main-header__nav">
             <a href="#home">Home</a>
-            <a href="#recipes">Recipes</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#recipes">My Recipes</a>
             <a href="#signin">Sign In</a>
             <a href="#register" className="main-header__cta">
               Explore Recipes
@@ -27,74 +19,58 @@ function MainPage() {
         </div>
       </header>
 
-      <section id="home" className="hero">
-        <div className="hero__overlay" />
-        <div className="hero__content">
-          <h1 className="hero__title">COOKING</h1>
-          <p className="hero__subtitle">
-            Discover recipes, master techniques, and cook with confidence
-          </p>
-          <div className="hero__actions">
-            <a href="#register" className="btn btn--primary">
-              Start Cooking
-            </a>
-            <a href="#recipes" className="btn btn--outline">
-              View Recipes
-            </a>
-          </div>
-        </div>
-      </section>
+      <section id="recipes" className="recipe-grid">
+  <div className="recipe-grid__inner">
+    <h2 className="recipe-grid__title">Popular Recipes</h2>
+    <p className="recipe-grid__subtitle">Hand-picked favorites from our community</p>
 
-      <section className="stats-bar">
-        <div className="stats-bar__item">
-          <span className="stats-bar__number">1000+</span>
-          <span className="stats-bar__label">Recipes</span>
+    <div className="recipe-grid__cards">
+      <a href="#recipe-1" className="recipe-card">
+        <div className="recipe-card__image">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" alt="Avocado Toast" />
         </div>
-        <div className="stats-bar__item">
-          <span className="stats-bar__number">50+</span>
-          <span className="stats-bar__label">Cuisines</span>
+        <div className="recipe-card__body">
+          <h3 className="recipe-card__name">Avocado Toast</h3>
+          <p className="recipe-card__meta">15 min · Easy</p>
         </div>
-        <div className="stats-bar__item">
-          <span className="stats-bar__number">20+</span>
-          <span className="stats-bar__label">Pro Chefs</span>
-        </div>
-      </section>
+      </a>
 
-      <section id="recipes" className="services">
-        <p className="services__eyebrow">What We Offer</p>
-        <h2 className="services__title">Featured Recipes</h2>
-        <div className="services__grid">
-          {RECIPES.map((recipe) => (
-            <article key={recipe.name} className="recipe-card">
-              <p className="recipe-card__category">{recipe.category}</p>
-              <div className="recipe-card__row">
-                <span className="recipe-card__name">{recipe.name}</span>
-                <span className="recipe-card__detail">{recipe.detail}</span>
-              </div>
-            </article>
-          ))}
+      <a href="#recipe-2" className="recipe-card">
+        <div className="recipe-card__image">
+          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80" alt="Margherita Pizza" />
         </div>
-      </section>
+        <div className="recipe-card__body">
+          <h3 className="recipe-card__name">Margherita Pizza</h3>
+          <p className="recipe-card__meta">40 min · Medium</p>
+        </div>
+      </a>
 
-      <section id="register" className="register-cta">
-        <div className="register-cta__overlay" />
-        <div className="register-cta__content">
-          <h2 className="register-cta__title">
-            Register for <span>FREE</span>
-          </h2>
-          <p className="register-cta__text">
-            Register with us and win amazing discount points on{' '}
-            <span>recipe collections</span>
-          </p>
-          <button type="button" className="register-cta__btn">
-            Register
-          </button>
+      <a href="#recipe-3" className="recipe-card">
+        <div className="recipe-card__image">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Grilled Salmon" />
         </div>
-      </section>
+        <div className="recipe-card__body">
+          <h3 className="recipe-card__name">Grilled Salmon</h3>
+          <p className="recipe-card__meta">25 min · Medium</p>
+        </div>
+      </a>
+
+      <a href="#recipe-4" className="recipe-card">
+        <div className="recipe-card__image">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Chocolate Cake" />
+        </div>
+        <div className="recipe-card__body">
+          <h3 className="recipe-card__name">Chocolate Cake</h3>
+          <p className="recipe-card__meta">1 hr · Hard</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 
       <footer className="main-footer">
         <p className="main-footer__logo">
-          Cook<span>Booky</span>
+          Cook<span>Cat</span>
         </p>
         <nav className="main-footer__nav">
           <a href="#recipes">Recipes</a>
@@ -120,7 +96,7 @@ function MainPage() {
             </svg>
           </a>
         </div>
-        <p className="main-footer__copy">CookBooky.com | All rights reserved</p>
+        <p className="main-footer__copy">CookCat.com | All rights reserved</p>
       </footer>
     </div>
   )
